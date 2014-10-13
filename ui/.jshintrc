@@ -20,10 +20,12 @@
   "smarttabs": true,
   "globals": {
     "angular": false,
+    "define": false,
     "google": false,
     "SockJS": false,
     "Stomp": false,
     "_": false,
-    "alert": false
+    "alert": false,
+   "requirejs": false
   }
 }

@@ -1,3 +1,4 @@
+define(['app/controllers/module'], function (module) {
 'use strict';
 
 /**
@@ -7,7 +8,7 @@
  * # AboutController
  * Controller of the botanicApp
  */
-angular.module('botanicApp')
-	.controller('AboutController', function ($scope) {
+module.controller('AboutController', function ($scope) {
 		$scope.message = 'Spring Rocks';
 	});
+});

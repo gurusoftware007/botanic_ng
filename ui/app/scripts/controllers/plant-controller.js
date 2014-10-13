@@ -1,3 +1,4 @@
+define(['app/controllers/module'], function (module) {
 'use strict';
 
 /**
@@ -7,8 +8,7 @@
  * # PlantController
  * Controller of the botanicApp
  */
-angular.module('botanicApp')
-	.controller('PlantController', function ($scope, $log, $http, $state, appConfiguration) {
+module.controller('PlantController', function ($scope, $log, $http, $state, appConfiguration) {
 		$scope.addPlant = function () {
 			$log.info($state);
 			$log.info($state.includes('plants'));
@@ -108,4 +108,4 @@ angular.module('botanicApp')
 			}
 		}, true);
 	});
-
+});

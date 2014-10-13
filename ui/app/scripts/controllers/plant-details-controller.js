@@ -1,3 +1,4 @@
+define(['app/controllers/module'], function (module) {
 'use strict';
 
 /**
@@ -7,8 +8,7 @@
  * # PlantController
  * Controller of the botanicApp
  */
-angular.module('botanicApp')
-	.controller('PlantDetailsController', function ($scope, $state, $stateParams, $http, $log, appConfiguration, FileUploader) {
+module.controller('PlantDetailsController', function ($scope, $state, $stateParams, $http, $log, appConfiguration, FileUploader) {
 		var plantId = $stateParams.plantId;
 		var plantPromise = $http.get(appConfiguration.botanicApiUrl + '/plants/' + plantId);
 		var plantImagesPromise = $http.get(appConfiguration.botanicApiUrl + '/plants/' + plantId + '/images');
@@ -38,11 +38,11 @@ angular.module('botanicApp')
 
 		plantImagesPromise.then(function(images) {
 			$log.info(images);
-			
+
 			if (images.data._embedded) {
 				$scope.images = images.data._embedded.images;
 			}
-			
+
 		});
 
 		$scope.goBack = function () {
@@ -111,3 +111,4 @@ angular.module('botanicApp')
 		};
 		console.info('uploader', uploader);
 	});
+});

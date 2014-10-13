@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="styles/main.css">
 	<!-- endbuild -->
 </head>
-<body ng-app="botanicApp">
+<body>
 	<!--[if lt IE 7]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
@@ -93,54 +93,7 @@
 	<![endif]-->
 	<!-- endbuild -->
 
-	<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
-
-	<!-- build:js(.) scripts/vendor.js -->
-
-	<!-- bower:js -->
-	<script src="bower_components/jquery/dist/jquery.js"></script>
-	<script src="bower_components/angular/angular.js"></script>
-	<script src="bower_components/json3/lib/json3.js"></script>
-	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-	<script src="bower_components/angular-resource/angular-resource.js"></script>
-	<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-	<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-	<script src="bower_components/angular-animate/angular-animate.js"></script>
-	<script src="bower_components/angular-touch/angular-touch.js"></script>
-	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-	<script src="bower_components/lodash/dist/lodash.compat.js"></script>
-	<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
-	<script src="bower_components/angular-file-upload/angular-file-upload.js"></script>
-	<script src="bower_components/get-style-property/get-style-property.js"></script>
-	<script src="bower_components/get-size/get-size.js"></script>
-	<script src="bower_components/eventie/eventie.js"></script>
-	<script src="bower_components/doc-ready/doc-ready.js"></script>
-	<script src="bower_components/eventEmitter/EventEmitter.js"></script>
-	<script src="bower_components/jquery-bridget/jquery.bridget.js"></script>
-	<script src="bower_components/matches-selector/matches-selector.js"></script>
-	<script src="bower_components/outlayer/item.js"></script>
-	<script src="bower_components/outlayer/outlayer.js"></script>
-	<script src="bower_components/masonry/masonry.js"></script>
-	<script src="bower_components/imagesloaded/imagesloaded.js"></script>
-	<script src="bower_components/angular-masonry/angular-masonry.js"></script>
-	<script src="bower_components/stomp-websocket/stomp.min.js"></script>
-	<script src="bower_components/sockjs/sockjs.js"></script>
-	<!-- endbower -->
-	
-	<script src="bower_components/stomp-websocket/lib/stomp.js"></script>
-	<!-- endbuild -->
-	
-	<!-- build:js({.tmp,app}) scripts/scripts.js -->
-	<script src="scripts/app.js"></script>
-	<script src="scripts/routes.js"></script>
-	<script src="scripts/directives.js"></script>
-	<script src="scripts/controllers/plant-controller.js"></script>
-	<script src="scripts/controllers/plant-details-controller.js"></script>
-	<script src="scripts/controllers/garden-controller.js"></script>
-	<script src="scripts/controllers/about-controller.js"></script>
-	<script src="scripts/controllers/login-controller.js"></script>
-	<script src="scripts/services/login-service.js"></script>
-	<!-- endbuild -->
+	<script data-main="scripts/boot.js" src="bower_components/requirejs/require.js"></script>
 
 </body>
 </html>

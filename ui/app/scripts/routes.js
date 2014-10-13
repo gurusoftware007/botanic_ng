@@ -1,6 +1,9 @@
-'use strict';
 
-angular.module('botanicApp')
+define(['app/app', 'uiRouter'], function(app) {
+
+'use strict';
+console.log('apppppppp',app);
+return app
 	.config(function ($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise('/plants');
 
@@ -45,3 +48,4 @@ angular.module('botanicApp')
 			templateUrl: 'views/about.html'
 		});
 	});
+});
